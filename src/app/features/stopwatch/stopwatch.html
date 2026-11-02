@@ -1,0 +1,22 @@
+<section class="watch">
+  <span class="eyebrow">TIME YOUR NEXT FOCUS SESSION</span>
+  <h1>Stopwatch</h1>
+  <output class="time" aria-live="off">{{ displayTime }}</output>
+  <div class="controls">
+    @if (running()) {
+      <button class="primary" type="button" (click)="pause()">Pause</button>
+      <button type="button" (click)="recordLap()">Lap</button>
+    } @else {
+      <button class="primary" type="button" (click)="start()">{{ elapsedMs() > 0 ? 'Resume' : 'Start' }}</button>
+      <button type="button" (click)="reset()" [disabled]="elapsedMs() === 0">Reset</button>
+    }
+  </div>
+  <div class="laps">
+    <h2>Lap times <span>{{ laps().length }}</span></h2>
+    @for (lap of laps(); track $index) {
+      <div class="lap"><span>Lap {{ laps().length - $index }}</span><strong>{{ formatLap(lap) }}</strong></div>
+    } @empty {
+      <p>No laps recorded yet.</p>
+    }
+  </div>
+</section>

@@ -1,0 +1,9 @@
+:host { display: block; width: min(100%, 520px); }
+.watch { background: #171d32; color: white; border-radius: 24px; padding: 38px; text-align: center; box-shadow: 0 22px 65px #17203b30; }
+.eyebrow { color: #aaa2ff; font-size: .7rem; letter-spacing: .13em; font-weight: 800; } h1 { margin: 12px 0 20px; }
+.time { display: block; font-size: clamp(3.4rem, 12vw, 5rem); font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: -.05em; }
+.controls { display: flex; justify-content: center; gap: 10px; margin: 26px 0; }
+button { border: 1px solid #48516c; background: #29324d; color: white; border-radius: 10px; padding: 12px 22px; font-weight: 700; }
+button.primary { background: #7666f5; border-color: #7666f5; }
+.laps { text-align: left; border-top: 1px solid #343d58; padding-top: 18px; } h2 { font-size: 1rem; display: flex; justify-content: space-between; }
+h2 span, .laps p { color: #aab2c6; font-size: .85rem; } .lap { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #343d58; }
